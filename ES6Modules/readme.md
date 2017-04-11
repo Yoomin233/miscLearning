@@ -18,12 +18,14 @@
    todo:'todo'
  }
  // main.js
- import {todo} from './module1'
+ import {todo} from './module1' // error
  console.log(todo) // undefined
+
+ import todo from './module1'
  console.log(todo.todo) // 'todo'
  ```
 
-#### 2. 如果预先已经知道模块内部定义的方法/物件， 则可以使用`export`语句. 会将导出的物件集合到一个对象中, 可以使用对象解构
+#### 2. 如果预先已经知道模块内部定义的方法/物件， 则可以使用`export`语句(`named export`). 会将导出的物件集合到一个对象中, 可以使用对象解构
  - 引用时只能使用对象解构
  ```javascript
  // module2.js
