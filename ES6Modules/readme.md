@@ -39,7 +39,7 @@
  m2f1() // 'module2Func2'
  ```
 
-#### 两种方法可以一起使用
+#### 3. 两种方法可以一起使用
  ```javascript
  // module3.js
  export default 'module3Default!'
