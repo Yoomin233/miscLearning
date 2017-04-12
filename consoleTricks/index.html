@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Console tricks!</title>
+  <style>
+    button {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <button class="formattingLog">
+    formatting log
+  </button>
+  <button class="trace">
+    console trace!
+  </button>
+  <script>
+    let $ = document.querySelector.bind(document)
+    $('button.formattingLog').addEventListener('click', () => {
+      console.log('%cFormatting log!', 'background-color: red;color: yellow;')
+      console.log('%cFormatting %csubStrings!', 'color: red', 'color: blue')
+    })
+    $('button.trace').addEventListener('click', () => setTimeout(() => console.trace(), 1000))
+  </script>
+</body>
+</html>
