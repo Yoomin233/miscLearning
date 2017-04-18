@@ -1,0 +1,7 @@
+// const module1 = require('./module1')
+// const {func1} = require('./module1')
+// module1()
+// func1()
+const {str} = require('./module1')
+console.log(str)
+require('./fileAndDirName')
