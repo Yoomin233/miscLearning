@@ -18,6 +18,15 @@
   <button class="trace">
     console trace!
   </button>
+  <button class="profile">
+    console profile!
+  </button>
+  <button class="monitor">
+    monitor function args!
+  </button>
+  <button class="debug">
+    debug function!
+  </button>
   <script>
     let $ = document.querySelector.bind(document)
     $('button.formattingLog').addEventListener('click', () => {
@@ -25,6 +34,23 @@
       console.log('%cFormatting %csubStrings!', 'color: red', 'color: blue')
     })
     $('button.trace').addEventListener('click', () => setTimeout(() => console.trace(), 1000))
+    $('button.profile').addEventListener('click', () => {
+      console.profile('profile')
+      let i = 1000
+      while (i--) {
+        let b = i * i
+      }
+      console.profileEnd('profile')
+    })
+    $('button.monitor').addEventListener('click', () => {
+       nonesense('hehe', 'chronic')
+    })
+    $('button.debug').addEventListener('click', () => {
+       nonesense('hehe', 'chronic')
+    })
+    function nonesense (arg1, arg2) {
+      console.log(arg1, arg2)
+    }
   </script>
 </body>
 </html>
