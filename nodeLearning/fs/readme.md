@@ -66,4 +66,6 @@ fs.writeFile(fileName, content, [options,] cb)
 也可以使用`fs.watch(filename, [options,] [listener(event, filename)])`方法来监视文件或目录
 该方法返回一个`fs.FSWatcher`对象, 可以调用其上的`close`方法来停止监视
 
-####
+#### 流
+创建文件流:
+`fs.createReadStream(path, [options])`

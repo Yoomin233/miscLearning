@@ -53,6 +53,7 @@ require('./moduleName') // reload!
 1.1 会从当前目录下,　依次向上寻找`node_modules`中的包;
 1.2 找不到时, 还会从系统变量中寻找相应的包
 2.  带路径引用(`./moduleName.js`, `/usr/moduleName.js`等)
+3. 当只指定路径时, 会自动寻找路径下的`index.js`文件
 
 #### NPM api
   - 搜索安装类
