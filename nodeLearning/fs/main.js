@@ -41,3 +41,12 @@ let fileStream = fs.createReadStream('./temo.txt', {
   encoding: 'utf8'
 })
 fileStream.on('open', (fd) => console.log('开始读取'))
+
+fileStream.on('data', (data) => {
+  console.log('receiving data');
+  console.log(data)
+})
+
+fileStream.on('end', () => console.log('读取完毕'))
+
+fileStream.on('close', () => console.log('文件关闭'))

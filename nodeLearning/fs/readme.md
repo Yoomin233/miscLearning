@@ -69,3 +69,5 @@ fs.writeFile(fileName, content, [options,] cb)
 #### 流
 创建文件流:
 `fs.createReadStream(path, [options])`
+可以使用的触发方法:
+`on(['open' | 'data' | 'end' | 'close'])`
