@@ -20,3 +20,4 @@ command: `bc`调出计算器
 command: `echo $LANG`显示当前语言, `LANG=en_US`修改当前session的语言
 
 command: `shutdown`执行关机/重启操作
+command: `cat`读出纯文本文件
