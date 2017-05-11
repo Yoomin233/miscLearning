@@ -45,7 +45,7 @@
 文件的三个变动时间: `mtime` - 内容变动时间, `ctime` - 状态的改变时间， `atime` - 文件的读取时间, 列出:  `ll file --time=atime`
 
 #### `umask`定义用户创建文件和目录时的默认权限
-`umask` - 002, 表示`owner`取得`7`权限, `group`取得`7`权限, `others`取得`5`权限, 则新创建文件的默认属性为`775`
+`umask` - 002, 表示`owner`取得`7(7-0)`权限, `group`取得`7(7-0)`权限, `others`取得`5(7-2)`权限, 则新创建文件的默认属性为`775`
 如果想要改变默认权限, 设置`umask 003`即可将新创建文件/文件夹的属性设置为`rxwrxwr--`
 
 #### `chattr`设置文件的隐藏属性, `lsattr`列出文件的隐藏属性, `file`查看文件类型
@@ -58,3 +58,5 @@
 `find`在硬盘中查找文件, 时间参数可以指定查找n天内做过变动的文件
   用法: `find /home/user -mtime +4`表示在用户目录中查找修改日期在5天之前的文件
   `find /home/user -user username`表示在用户目录下查找所有`所有者`为`username`的文件
+  `find /home/user -perm [+-] 4755`查找对应权限的文件
+  `find /home/user -size [+-]SIZE`查找文件的大小
