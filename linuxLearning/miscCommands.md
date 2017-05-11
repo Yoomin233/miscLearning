@@ -2,6 +2,7 @@
 自动补全: `tab`
 终止当前程序: `ctrl + c`
 输入结束/exit: `ctrl + d`
+连续执行: `;` or `&&`
 
 查看帮助(man page): `man command`, 例如`man date`. man for manual.
 	`man command`后面第一行出现的`command(num)`中的`num`代表命令的类型:
